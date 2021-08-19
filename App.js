@@ -7,11 +7,9 @@
  */
 
 import React from 'react';
-import type {Node} from 'react';
 import {
   StyleSheet,
   Text,
-  useColorScheme,
   View,
 } from 'react-native';
 
@@ -27,7 +25,7 @@ const App = () => {
 const styles = StyleSheet.create({
   page: {
     flex: 1,
-  }
+  },
 });
 
 export default App;
