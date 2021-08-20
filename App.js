@@ -1,31 +1,13 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
 import React from 'react';
-import {
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
-
+import {View} from 'react-native';
+import {Login} from './src/screens';
 
 const App = () => {
   return (
-    <View style={styles.sectionContainer}>
-      <Text>Danica massie</Text>
+    <View>
+      <Login> </Login>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  page: {
-    flex: 1,
-  },
-});
 
 export default App;
