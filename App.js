@@ -1,13 +1,9 @@
 import React from 'react';
 import {View} from 'react-native';
-import {Login} from './src/screens';
+import {Login, Dashboard, Analytics} from './src/screens';
 
 const App = () => {
-  return (
-    <View>
-      <Login> </Login>
-    </View>
-  );
+  return <Dashboard />;
 };
 
 export default App;

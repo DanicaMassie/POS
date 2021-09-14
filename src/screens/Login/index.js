@@ -7,11 +7,11 @@ const Login = () => {
   return (
     <View style={styles.page}>
       <Image source={ILLogin} style={styles.illustration} />
-      <TextInput label="Email" />
+      <TextInput style={styles.Email} label="Email" />
       <Gap height={23} />
       <TextInput label="Password" secureTextEntry type="password" />
       <View style={styles.forgotPassword}>
-        <CheckBox label="Ingat saya" />
+        <CheckBox style={styles.Ingat} label="Ingat saya" />
         <Link text="Lupa Password?" />
         {/* <Button type='icon-only' icon='icon-eye' /> */}
         {/* <IconEye /> */}
@@ -32,15 +32,17 @@ export default Login;
 const styles = StyleSheet.create({
   page: {
     marginHorizontal: 20,
-    marginTop: 45,
+    marginTop: 200,
   },
   illustration: {
     alignSelf: 'center',
+    marginTop: -150,
   },
   forgotPassword: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginVertical: 20,
+    marginRight: 268,
   },
   action: {
     alignItems: 'center',

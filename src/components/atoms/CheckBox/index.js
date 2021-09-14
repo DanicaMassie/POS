@@ -9,7 +9,7 @@ const CheckBox = ({label}) => {
       <Check
         disabled={false}
         value={toggleCheckBox}
-        onValueChange={(newValue) => setToggleCheckBox(newValue)}
+        onValueChange={newValue => setToggleCheckBox(newValue)}
       />
       <Text style={styles.label}>{label}</Text>
     </View>
@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
+    marginLeft: 264,
   },
   label: {
     fontSize: 10,

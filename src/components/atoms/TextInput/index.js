@@ -6,9 +6,9 @@ import Button from '../Button';
 const TextInput = ({label, type, ...rest}) => {
   const [showPassword, setShowPassword] = useState(true);
   return (
-    <View>
+    <View style={styles.container}>
       <Text style={styles.label}>{label}</Text>
-      <View style={styles.passwordContainer}>
+      <View style={styles.TextInputContainer}>
         <Input
           style={styles.textInput}
           {...rest}
@@ -29,6 +29,9 @@ const TextInput = ({label, type, ...rest}) => {
 export default TextInput;
 
 const styles = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+  },
   textInput: {
     flex: 1,
   },
@@ -36,9 +39,10 @@ const styles = StyleSheet.create({
     fontSize: 12,
     marginBottom: 10,
   },
-  passwordContainer: {
+  TextInputContainer: {
+    width: 700,
     flexDirection: 'row',
-    borderColor: '#08B4B4',
+    borderColor: '#39A2DB',
     borderWidth: 1,
     borderRadius: 8,
     paddingHorizontal: 16,
