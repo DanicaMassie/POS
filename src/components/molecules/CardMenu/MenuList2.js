@@ -9,32 +9,32 @@ import {
   Image,
   TouchableWithoutFeedback,
 } from 'react-native';
-import {Menu1} from '../../../assets';
+import {Minum} from '../../../assets';
 
 const DATA = [
   {
     id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-    title: 'Nasi Goreng',
+    title: 'Lemon Tea',
     price: 'Rp. 20.000',
   },
   {
     id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
-    title: 'Mie Goreng',
+    title: 'Jus Apel',
     price: 'Rp. 20.000',
   },
   {
     id: '58694a0f-3da1-471f-bd96-145571e29d72',
-    title: 'Ikan Goreng',
+    title: 'Lemonade',
     price: 'Rp. 20.000',
   },
   {
     id: '58694a0f-3da1-471f-bd96-145p71e29d72',
-    title: 'Ikan Goreng',
+    title: 'Kopi',
     price: 'Rp. 20.000',
   },
   {
     id: '58694a0f-3da1-471f-bo96-145p71e29d72',
-    title: 'Ikan Goreng',
+    title: 'Teh',
     price: 'Rp. 20.000',
   },
 ];
@@ -42,14 +42,14 @@ const DATA = [
 const Menu = ({title, price}) => (
   <View style={styles.item}>
     <View style={styles.pictureContainer}>
-      <Image source={Menu1} style={{width: '100%', height: '100%'}} />
+      <Image source={Minum} style={{width: '100%', height: '100%'}} />
     </View>
     <Text style={styles.title}>{title}</Text>
     <Text style={styles.title}>{price}</Text>
   </View>
 );
 
-const MenuList = () => {
+const MenuList2 = () => {
   const renderItem = ({item}) => <Menu title={item.title} price={item.price} />;
 
   return (
@@ -92,4 +92,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MenuList;
+export default MenuList2;

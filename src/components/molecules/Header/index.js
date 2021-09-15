@@ -1,19 +1,21 @@
 import React from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
-import {IconNotification, ProfilePict} from '../../../assets';
+import {ProfilePict} from '../../../assets';
 import {Button} from '../..';
-import {HeaderDashboard} from '..';
 
 const Header = () => {
   return (
     <View style={styles.container}>
       <View style={styles.logo} />
       <Text style={styles.text1}>Point Of Sales</Text>
-      <IconNotification style={styles.notification} />
-      <Button type="icon-only" icon="icon-notification" />
-      <Image source={ProfilePict} style={styles.Pict} />
-      <Text style={styles.text2}>Kim Seon Ho</Text>
-      <Text style={styles.text3}>Chasier</Text>
+      <View style={styles.right}>
+        <Button type="icon-only" icon="icon-notification" />
+        <Image source={ProfilePict} style={styles.Pict} />
+        <View style={{marginLeft: 10}}>
+          <Text style={styles.text2}>Kim Seon Ho</Text>
+          <Text style={styles.text3}>Chasier</Text>
+        </View>
+      </View>
     </View>
   );
 };
@@ -43,15 +45,21 @@ const styles = StyleSheet.create({
     marginLeft: 7,
     marginTop: 26,
   },
-  text2: {
-    marginLeft: 10,
-    marginTop: 22,
+  right: {
+    margin: 20,
+    marginLeft: 900,
+    flexDirection: 'row',
+    alignItems: 'center',
   },
-  text3: {
-    marginLeft: 10,
-    marginTop: 46,
-  },
-  Pict: {
-    marginTop: 20,
-  },
+  // text2: {
+  //   marginLeft: 10,
+  //   marginTop: 22,
+  // },
+  // text3: {
+  //   marginLeft: 10,
+  //   marginTop: 46,
+  // },
+  // Pict: {
+  //   marginTop: 20,
+  // },
 });

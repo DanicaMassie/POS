@@ -1,26 +1,28 @@
 import React, {useState} from 'react';
 import {StyleSheet, Text, TextInput as Input, View} from 'react-native';
-import {IconEye} from '../../../assets';
+import {IconEye, IconSearch} from '../../../assets';
 import Button from '../Button';
 
 const TextInput = ({label, type, ...rest}) => {
   const [showPassword, setShowPassword] = useState(true);
   return (
-    <View style={styles.container}>
-      <Text style={styles.label}>{label}</Text>
-      <View style={styles.TextInputContainer}>
-        <Input
-          style={styles.textInput}
-          {...rest}
-          secureTextEntry={showPassword}
-        />
-        {type === 'password' && (
-          <Button
-            type="icon-only"
-            icon="icon-eye"
-            onPress={() => setShowPassword(!showPassword)}
+    <View>
+      <View style={styles.container}>
+        <Text style={styles.label}>{label}</Text>
+        <View style={styles.TextInputContainer}>
+          <Input
+            style={styles.textInput}
+            {...rest}
+            secureTextEntry={showPassword}
           />
-        )}
+          {type === 'password' && (
+            <Button
+              type="icon-only"
+              icon="icon-eye"
+              onPress={() => setShowPassword(!showPassword)}
+            />
+          )}
+        </View>
       </View>
     </View>
   );

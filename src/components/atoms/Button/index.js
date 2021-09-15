@@ -1,9 +1,8 @@
 import React from 'react';
-import {StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import IconOnly from './IconOnly';
 
 const Button = ({label, onPress, color = '#39A2DB', type, icon}) => {
-  // console.log('hehehe : ', icon);
   if (type === 'icon-only') {
     return <IconOnly icon={icon} onPress={onPress} />;
   }
@@ -22,7 +21,7 @@ const styles = StyleSheet.create({
     backgroundColor: color,
     width: 300,
     height: 42,
-    borderRadius: 24,
+    borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'center',
   }),

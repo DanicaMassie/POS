@@ -10,6 +10,8 @@ import IconSettings from './IconSettings.svg';
 import IconSearch from './IconSearch.svg';
 import IconClear from './IconClear.svg';
 import IconArrow from './IconArrow.svg';
+import IconMin from './IconMin.svg';
+import IconPlus from './IconPlus.svg';
 
 export {
   IconEye,
@@ -24,4 +26,6 @@ export {
   IconSearch,
   IconClear,
   IconArrow,
+  IconMin,
+  IconPlus,
 };

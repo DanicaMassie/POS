@@ -12,6 +12,8 @@ import {
   IconSettings,
   IconClear,
   IconArrow,
+  IconMin,
+  IconPlus,
 } from '../../../assets/icons';
 
 const IconOnly = ({icon, onPress}) => {
@@ -88,6 +90,30 @@ const IconOnly = ({icon, onPress}) => {
         <IconClear
           onPress={() => {
             alert('clear');
+          }}
+        />
+      );
+    } else if (icon === 'icon-arrow') {
+      return (
+        <IconArrow
+          onPress={() => {
+            alert('arrow');
+          }}
+        />
+      );
+    } else if (icon === 'icon-min') {
+      return (
+        <IconMin
+          onPress={() => {
+            alert('min');
+          }}
+        />
+      );
+    } else if (icon === 'icon-plus') {
+      return (
+        <IconPlus
+          onPress={() => {
+            alert('plus');
           }}
         />
       );

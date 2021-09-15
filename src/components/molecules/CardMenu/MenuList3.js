@@ -14,27 +14,27 @@ import {Menu1} from '../../../assets';
 const DATA = [
   {
     id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-    title: 'Nasi Goreng',
+    title: 'Pisang Goreng',
     price: 'Rp. 20.000',
   },
   {
     id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
-    title: 'Mie Goreng',
+    title: 'Ubi Goreng',
     price: 'Rp. 20.000',
   },
   {
     id: '58694a0f-3da1-471f-bd96-145571e29d72',
-    title: 'Ikan Goreng',
+    title: 'Kentang Goreng',
     price: 'Rp. 20.000',
   },
   {
     id: '58694a0f-3da1-471f-bd96-145p71e29d72',
-    title: 'Ikan Goreng',
+    title: 'Ice Cream',
     price: 'Rp. 20.000',
   },
   {
     id: '58694a0f-3da1-471f-bo96-145p71e29d72',
-    title: 'Ikan Goreng',
+    title: 'Banana Split',
     price: 'Rp. 20.000',
   },
 ];
@@ -49,7 +49,7 @@ const Menu = ({title, price}) => (
   </View>
 );
 
-const MenuList = () => {
+const MenuList3 = () => {
   const renderItem = ({item}) => <Menu title={item.title} price={item.price} />;
 
   return (
@@ -92,4 +92,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MenuList;
+export default MenuList3;
