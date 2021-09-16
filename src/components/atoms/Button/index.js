@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import IconOnly from './IconOnly';
 
-const Button = ({label, onPress, color = '#39A2DB', type, icon}) => {
+const Button = ({label, onPress, color = '#39A2DB', type, icon, coba}) => {
   if (type === 'icon-only') {
     return <IconOnly icon={icon} onPress={onPress} />;
   }

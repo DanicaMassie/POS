@@ -9,7 +9,7 @@ import {
   ScrollView,
 } from 'react-native';
 import {IconSearch} from '../../../assets';
-import {Button, TextInput} from '../../../components';
+import {Button, TextInput, Gap} from '../../../components';
 import MenuList from './MenuList';
 import MenuList2 from './MenuList2';
 import MenuList3 from './MenuList3';
@@ -60,11 +60,11 @@ const CardMenu = () => {
           />
         </View>
         <ScrollView>
-          <Text style={{backgroundColor: 'yellow'}}>Makanan</Text>
+          <Text style={styles.textMenu}>Makanan</Text>
           <MenuList />
-          <Text style={{backgroundColor: 'yellow'}}>Minuman</Text>
+          <Text style={styles.textMenu}>Minuman</Text>
           <MenuList2 />
-          <Text style={{backgroundColor: 'yellow'}}>Snack</Text>
+          <Text style={styles.textMenu}>Snack</Text>
           <MenuList3 />
         </ScrollView>
       </View>
@@ -103,24 +103,30 @@ const CardMenu = () => {
           <View style={styles.promoBar}>
             <View style={styles.promoStyle}>
               <Text style={styles.textSize}>20% Promo Makanan</Text>
-              <Button
-                type="icon-only"
-                icon="icon-arrow"
-                style={styles.buttonPromo}
-              />
+              <View style={styles.buttonPromo}>
+                <Button type="icon-only" icon="icon-arrow" />
+              </View>
             </View>
           </View>
         </View>
         <View style={styles.containerDetail}>
           <Text style={styles.textBold}>Detail Transaksi</Text>
-          <Text style={styles.textSize}>Subtotal</Text>
-          <Text style={styles.textSize}>Pajak</Text>
-          <Text style={styles.textSize}>Diskon</Text>
+          <Gap height={10} />
+          <Text>Subtotal</Text>
+          <Gap height={5} />
+          <Text>Pajak</Text>
+          <Gap height={5} />
+          <Text>Diskon</Text>
+          <Gap height={5} />
           <Text style={styles.textBold}>Payment</Text>
+          <Gap height={10} />
           <Button label="Place Order" />
+          <Gap height={10} />
           <Text style={styles.textBold}>Detail Pembayaran</Text>
-          <Text style={styles.textSize}>Bayar</Text>
-          <Text style={styles.textSize}>Kembalian</Text>
+          <Gap height={10} />
+          <Text>Bayar</Text>
+          <Gap height={5} />
+          <Text>Kembalian</Text>
         </View>
       </View>
     </View>
@@ -158,6 +164,11 @@ const styles = StyleSheet.create({
     fontSize: 14,
     marginLeft: 5,
   },
+  textMenu: {
+    fontWeight: 'bold',
+    marginTop: 15,
+    marginBottom: -25,
+  },
   flatlistStyle: {
     height: 40,
     width: '100%',
@@ -175,7 +186,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   orderStyle: {
-    backgroundColor: 'yellow',
+    backgroundColor: '#ffffff',
     flexDirection: 'row',
     alignItems: 'center',
     padding: 3,
@@ -190,7 +201,7 @@ const styles = StyleSheet.create({
   },
   clearAll: {
     color: 'red',
-    marginLeft: 200,
+    marginLeft: 190,
     fontSize: 14,
   },
   containerPromo: {
@@ -216,7 +227,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   buttonPromo: {
-    marginLeft: 60,
+    marginHorizontal: 200,
   },
   containerDetail: {
     padding: 15,
@@ -225,5 +236,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff',
     margin: 10,
     borderRadius: 8,
+  },
+  textDetail: {
+    marginBottom: 5,
+  },
+  textDetail2: {
+    fontWeight: 'bold',
+    marginBottom: 8,
   },
 });

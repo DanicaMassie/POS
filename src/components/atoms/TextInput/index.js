@@ -7,8 +7,10 @@ const TextInput = ({label, type, ...rest}) => {
   const [showPassword, setShowPassword] = useState(true);
   return (
     <View>
-      <View style={styles.container}>
+      <View style={styles.text}>
         <Text style={styles.label}>{label}</Text>
+      </View>
+      <View style={styles.container}>
         <View style={styles.TextInputContainer}>
           <Input
             style={styles.textInput}
@@ -34,6 +36,9 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
   },
+  text: {
+    marginLeft: 280,
+  },
   textInput: {
     flex: 1,
   },
@@ -50,6 +55,5 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingVertical: 12,
     alignItems: 'center',
-    justifyContent: 'center',
   },
 });

@@ -59,6 +59,7 @@ const Item = ({title, price}) => (
     </View>
     <View style={styles.buttonContainer}>
       <Button type="icon-only" icon="icon-min" />
+      <Text> 1 </Text>
       <Button type="icon-only" icon="icon-plus" />
     </View>
   </View>
@@ -84,7 +85,7 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   item: {
-    backgroundColor: '#f9c2ff',
+    backgroundColor: '#ffffff',
     padding: 5,
     flexDirection: 'row',
     marginBottom: 10,
@@ -105,6 +106,8 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     flexDirection: 'row',
+    alignItems: 'center',
+    marginHorizontal: 150,
   },
 });
 
