@@ -25,9 +25,7 @@ const Sidebar = () => {
       <Button
         type="icon-only"
         icon="icon-product"
-        onPress={() => {
-          console.log('product');
-        }}
+        onPress={() => navigation.navigate('Products')}
       />
       <Button
         type="icon-only"
