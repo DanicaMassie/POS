@@ -9,7 +9,13 @@ const Header = () => {
       <View style={styles.logo} />
       <Text style={styles.text1}>Point Of Sales</Text>
       <View style={styles.right}>
-        <Button type="icon-only" icon="icon-notification" />
+        <Button
+          type="icon-only"
+          icon="icon-notification"
+          onPress={() => {
+            console.log('notification');
+          }}
+        />
         <Image source={ProfilePict} style={styles.Pict} />
         <View style={styles.text2}>
           <Text>Kim Seon Ho</Text>
@@ -44,10 +50,12 @@ const styles = StyleSheet.create({
   },
   text1: {
     marginLeft: 15,
+    fontWeight: 'bold',
+    fontSize: 16,
   },
   right: {
     margin: 20,
-    marginLeft: 900,
+    marginLeft: 870,
     flexDirection: 'row',
     alignItems: 'center',
   },

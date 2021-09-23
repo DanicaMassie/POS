@@ -1,19 +1,19 @@
 import React from 'react';
 import {BackHandler, ScrollView, StyleSheet, Text, View} from 'react-native';
-import {Header, Sidebar, CardDashboard} from '../../components';
+import {Header, Sidebar, CardCustomer} from '../../components';
 
-const Dashboard = () => {
+const Customer = () => {
   return (
     <View style={styles.container}>
       <Header />
       <View style={styles.row}>
         <Sidebar />
-        <CardDashboard />
+        <CardCustomer />
       </View>
     </View>
   );
 };
-export default Dashboard;
+export default Customer;
 
 const styles = StyleSheet.create({
   container: {

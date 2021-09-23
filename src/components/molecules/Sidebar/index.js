@@ -1,19 +1,57 @@
+import {useNavigation} from '@react-navigation/core';
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
-import {Button} from '../../../components';
+import {View, StyleSheet} from 'react-native';
+import {Button} from '../../atoms';
 
 const Sidebar = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      <Button type="icon-only" icon="icon-dashboard" />
-      <Button type="icon-only" icon="icon-analytics" />
-      <Button type="icon-only" icon="icon-customer" />
-      <Button type="icon-only" icon="icon-product" />
-      <Button type="icon-only" icon="icon-coupon" />
-      <Button type="icon-only" icon="icon-employee" />
+      <Button
+        type="icon-only"
+        icon="icon-dashboard"
+        onPress={() => navigation.navigate('Dashboard')}
+      />
+      <Button
+        type="icon-only"
+        icon="icon-analytics"
+        onPress={() => navigation.navigate('Analytics')}
+      />
+      <Button
+        type="icon-only"
+        icon="icon-customer"
+        onPress={() => navigation.navigate('Customer')}
+      />
+      <Button
+        type="icon-only"
+        icon="icon-product"
+        onPress={() => {
+          console.log('product');
+        }}
+      />
+      <Button
+        type="icon-only"
+        icon="icon-coupon"
+        onPress={() => {
+          console.log('coupon');
+        }}
+      />
+      <Button
+        type="icon-only"
+        icon="icon-employee"
+        onPress={() => {
+          console.log('employee');
+        }}
+      />
       <View
         style={{flex: 1, backgroundColor: 'white', justifyContent: 'flex-end'}}>
-        <Button type="icon-only" icon="icon-setting" />
+        <Button
+          type="icon-only"
+          icon="icon-setting"
+          onPress={() => {
+            console.log('setting');
+          }}
+        />
       </View>
     </View>
   );

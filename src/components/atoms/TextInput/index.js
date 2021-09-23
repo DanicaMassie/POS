@@ -12,11 +12,15 @@ const TextInput = ({label, type, ...rest}) => {
       </View>
       <View style={styles.container}>
         <View style={styles.TextInputContainer}>
-          <Input
-            style={styles.textInput}
-            {...rest}
-            secureTextEntry={showPassword}
-          />
+          {type === 'password' ? (
+            <Input
+              style={styles.textInput}
+              {...rest}
+              secureTextEntry={showPassword}
+            />
+          ) : (
+            <Input style={styles.textInput} {...rest} />
+          )}
           {type === 'password' && (
             <Button
               type="icon-only"

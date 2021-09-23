@@ -10,42 +10,42 @@ import {
   ScrollView,
 } from 'react-native';
 import {Menu1} from '../../../assets';
-import {Button} from '../../../components';
+import {Gap} from '../../atoms';
 
 const DATA = [
   {
     id: 'bd7acbea-c1b1-46c2-aed5-3ad53acb28ba',
     title: 'Nasi Goreng',
-    price: 'Rp. 20.000',
+    items: '40 Items',
   },
   {
     id: 'bd7acbea-c1b1-46c2-aed5-3ad53aab28ba',
     title: 'Nasi Goreng',
-    price: 'Rp. 20.000',
+    items: '40 Items',
   },
   {
     id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
     title: 'Nasi Goreng',
-    price: 'Rp. 20.000',
+    items: '40 Items',
   },
   {
     id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
     title: 'Mie Goreng',
-    price: 'Rp. 20.000',
+    items: '40 Items',
   },
   {
     id: '58694a0f-3da1-471f-bd96-145571e29d72',
     title: 'Ikan Goreng',
-    price: 'Rp. 20.000',
+    items: '40 Items',
   },
   {
     id: '58694a0f-3da1-471f-bd96-145571231e29d72',
     title: 'Ikan Goreng',
-    price: 'Rp. 20.000',
+    items: '40 Items',
   },
 ];
 
-const Item = ({title, price}) => (
+const Item = ({title, items}) => (
   <View style={styles.item}>
     <View style={styles.pictureContainer}>
       <Image
@@ -55,18 +55,14 @@ const Item = ({title, price}) => (
     </View>
     <View style={styles.titleContainer}>
       <Text style={styles.title1}>{title}</Text>
-      <Text style={styles.title1}>{price}</Text>
-    </View>
-    <View style={styles.buttonContainer}>
-      <Button type="icon-only" icon="icon-min" />
-      <Text> 1 </Text>
-      <Button type="icon-only" icon="icon-plus" />
+      <Gap width={140} />
+      <Text style={styles.title1}>{items}</Text>
     </View>
   </View>
 );
 
-const OrderList = () => {
-  const renderItem = ({item}) => <Item title={item.title} price={item.price} />;
+const ItemSold = () => {
+  const renderItem = ({item}) => <Item title={item.title} items={item.items} />;
 
   return (
     <View style={styles.container}>
@@ -99,7 +95,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'yellow',
   },
   titleContainer: {
-    flexDirection: 'column',
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   title1: {
     padding: 5,
@@ -111,4 +108,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default OrderList;
+export default ItemSold;

@@ -8,7 +8,7 @@ const Button = ({label, onPress, color = '#39A2DB', type, icon, coba}) => {
   }
 
   return (
-    <TouchableOpacity style={styles.container(color)} onPress={() => {}}>
+    <TouchableOpacity style={styles.container(color)} onPress={onPress}>
       <Text style={styles.label}>{label}</Text>
     </TouchableOpacity>
   );

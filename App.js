@@ -1,9 +1,14 @@
+import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 import {View} from 'react-native';
-import {Login, Dashboard, Analytics} from './src/screens';
+import Router from './src/router';
 
 const App = () => {
-  return <Dashboard />;
+  return (
+    <NavigationContainer>
+      <Router />
+    </NavigationContainer>
+  );
 };
 
 export default App;

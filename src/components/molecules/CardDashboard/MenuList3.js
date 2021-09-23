@@ -7,49 +7,49 @@ import {
   Text,
   StatusBar,
   Image,
-  TouchableWithoutFeedback,
+  TouchableOpacity,
 } from 'react-native';
-import {Minum} from '../../../assets';
+import {Menu1} from '../../../assets';
 
 const DATA = [
   {
     id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-    title: 'Lemon Tea',
+    title: 'Pisang Goreng',
     price: 'Rp. 20.000',
   },
   {
     id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
-    title: 'Jus Apel',
+    title: 'Ubi Goreng',
     price: 'Rp. 20.000',
   },
   {
     id: '58694a0f-3da1-471f-bd96-145571e29d72',
-    title: 'Lemonade',
+    title: 'Kentang Goreng',
     price: 'Rp. 20.000',
   },
   {
     id: '58694a0f-3da1-471f-bd96-145p71e29d72',
-    title: 'Kopi',
+    title: 'Ice Cream',
     price: 'Rp. 20.000',
   },
   {
     id: '58694a0f-3da1-471f-bo96-145p71e29d72',
-    title: 'Teh',
+    title: 'Banana Split',
     price: 'Rp. 20.000',
   },
 ];
 
 const Menu = ({title, price}) => (
-  <View style={styles.item}>
+  <TouchableOpacity style={styles.item}>
     <View style={styles.pictureContainer}>
-      <Image source={Minum} style={{width: '100%', height: '100%'}} />
+      <Image source={Menu1} style={{width: '100%', height: '100%'}} />
     </View>
     <Text style={styles.title}>{title}</Text>
     <Text style={styles.title}>{price}</Text>
-  </View>
+  </TouchableOpacity>
 );
 
-const MenuList2 = () => {
+const MenuList3 = () => {
   const renderItem = ({item}) => <Menu title={item.title} price={item.price} />;
 
   return (
@@ -92,4 +92,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MenuList2;
+export default MenuList3;

@@ -1,5 +1,7 @@
 import Header from './Header';
 import Sidebar from './Sidebar';
-import CardMenu from './CardMenu';
+import CardDashboard from './CardDashboard';
+import CardAnalytics from './CardAnalytics';
+import CardCustomer from './CardCustomer';
 
-export {Header, Sidebar, CardMenu};
+export {Header, Sidebar, CardDashboard, CardAnalytics, CardCustomer};

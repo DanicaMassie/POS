@@ -3,19 +3,18 @@ import {
   View,
   Text,
   StyleSheet,
-  Image,
   FlatList,
   TouchableOpacity,
   ScrollView,
 } from 'react-native';
 import {IconSearch} from '../../../assets';
-import {Button, TextInput, Gap} from '../../../components';
+import {Button, Gap} from '../../atoms';
 import MenuList from './MenuList';
 import MenuList2 from './MenuList2';
 import MenuList3 from './MenuList3';
 import OrderList from './OrderList';
 
-const CardMenu = () => {
+const CardDashboard = () => {
   const [selectedId, setSelectedId] = useState();
 
   const Category = ({item}) => {
@@ -23,16 +22,20 @@ const CardMenu = () => {
     return (
       <TouchableOpacity
         onPress={() => setSelectedId(item.id)}
-        style={{
-          height: '100%',
-          width: 100,
-          justifyContent: 'center',
-          alignItems: 'center',
-          marginRight: 5,
-          borderBottomColor: color,
-          borderBottomWidth: 2,
-        }}>
+        style={styles.category(color)}>
         <Text>{item.name}</Text>
+      </TouchableOpacity>
+    );
+  };
+
+  const PaymentType = ({item}) => {
+    const color = item.id === selectedId ? '#39A2DB' : 'white';
+    const textColor = item.id === selectedId ? 'white' : 'black';
+    return (
+      <TouchableOpacity
+        onPress={() => setSelectedId(item.id)}
+        style={styles.buttonText(color)}>
+        <Text style={styles.paymentText(textColor)}>{item.name}</Text>
       </TouchableOpacity>
     );
   };
@@ -93,8 +96,13 @@ const CardMenu = () => {
         <View style={styles.containerOrder}>
           <View style={styles.orderStyle}>
             <Text style={styles.textBold}>Current Order</Text>
-            <Text style={styles.clearAll}>Clear All</Text>
-            <Button type="icon-only" icon="icon-clear" />
+            <TouchableOpacity
+              onPress={() => {
+                console.log('heheheheh');
+              }}>
+              <Text style={styles.clearAll}>Clear All</Text>
+              <Button type="icon-only" icon="icon-clear" />
+            </TouchableOpacity>
           </View>
           <OrderList />
         </View>
@@ -104,28 +112,60 @@ const CardMenu = () => {
             <View style={styles.promoStyle}>
               <Text style={styles.textSize}>20% Promo Makanan</Text>
               <View style={styles.buttonPromo}>
-                <Button type="icon-only" icon="icon-arrow" />
+                <Button
+                  type="icon-only"
+                  icon="icon-arrow"
+                  onPress={() => {
+                    console.log('arrow');
+                  }}
+                />
               </View>
             </View>
           </View>
         </View>
         <View style={styles.containerDetail}>
           <Text style={styles.textBold}>Detail Transaksi</Text>
-          <Gap height={10} />
+          <Gap height={5} />
           <Text>Subtotal</Text>
-          <Gap height={5} />
+          <Gap height={3} />
           <Text>Pajak</Text>
-          <Gap height={5} />
+          <Gap height={3} />
           <Text>Diskon</Text>
-          <Gap height={5} />
+          <Gap height={3} />
           <Text style={styles.textBold}>Payment</Text>
-          <Gap height={10} />
-          <Button label="Place Order" />
-          <Gap height={10} />
+          <Gap height={8} />
+          <View style={styles.containerButton}>
+            <View style={styles.buttonPayment}>
+              <FlatList
+                horizontal
+                data={[
+                  {name: 'Cash', id: 1},
+                  {name: 'Card', id: 2},
+                  {name: 'E-Wallet', id: 3},
+                ]}
+                renderItem={PaymentType}
+                keyExtractor={item => item.id}
+              />
+              {/* <TouchableOpacity style={styles.buttonText}>
+                <Text>Cash</Text>
+              </TouchableOpacity>
+              <Gap width={20} />
+              <TouchableOpacity style={styles.buttonText}>
+                <Text>Card</Text>
+              </TouchableOpacity>
+              <Gap width={20} />
+              <TouchableOpacity style={styles.buttonText}>
+                <Text>E-Wallet</Text>
+              </TouchableOpacity> */}
+            </View>
+            <Gap height={8} />
+            <Button label="Place Order" />
+          </View>
+          <Gap height={8} />
           <Text style={styles.textBold}>Detail Pembayaran</Text>
-          <Gap height={10} />
-          <Text>Bayar</Text>
           <Gap height={5} />
+          <Text>Bayar</Text>
+          <Gap height={3} />
           <Text>Kembalian</Text>
         </View>
       </View>
@@ -133,11 +173,20 @@ const CardMenu = () => {
   );
 };
 
-export default CardMenu;
+export default CardDashboard;
 
 const styles = StyleSheet.create({
+  category: color => ({
+    height: '100%',
+    width: 100,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 5,
+    borderBottomColor: color,
+    borderBottomWidth: 2,
+  }),
   container: {
-    backgroundColor: '#F3F3F3',
+    // backgroundColor: '#F3F3F3',
     // height: 660,
     flexDirection: 'row',
     // width: '100%',
@@ -176,7 +225,7 @@ const styles = StyleSheet.create({
     borderBottomColor: '#cccccc',
   },
   containerOrder: {
-    padding: 10,
+    padding: 8,
     width: 400,
     height: 300,
     backgroundColor: '#ffffff',
@@ -205,7 +254,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
   containerPromo: {
-    padding: 10,
+    padding: 8,
     width: 400,
     height: 80,
     backgroundColor: '#ffffff',
@@ -230,18 +279,42 @@ const styles = StyleSheet.create({
     marginHorizontal: 200,
   },
   containerDetail: {
-    padding: 15,
+    padding: 8,
     width: 400,
     height: 300,
     backgroundColor: '#ffffff',
     margin: 10,
     borderRadius: 8,
   },
-  textDetail: {
-    marginBottom: 5,
+  // textDetail: {
+  //   marginBottom: 5,
+  // },
+  // textDetail2: {
+  //   fontWeight: 'bold',
+  //   marginBottom: 8,
+  // },
+  containerButton: {
+    alignItems: 'center',
   },
-  textDetail2: {
-    fontWeight: 'bold',
-    marginBottom: 8,
+  buttonPayment: {
+    // flexDirection: 'row',
+    width: '100%',
+    height: 30,
+    alignItems: 'center',
   },
+
+  buttonText: color => ({
+    width: 80,
+    height: 30,
+    borderRadius: 8,
+    borderWidth: 2,
+    borderColor: '#39A2DB',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginHorizontal: 15,
+    backgroundColor: color,
+  }),
+  paymentText: color => ({
+    color: color,
+  }),
 });

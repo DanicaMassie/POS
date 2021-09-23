@@ -12,6 +12,10 @@ import IconClear from './IconClear.svg';
 import IconArrow from './IconArrow.svg';
 import IconMin from './IconMin.svg';
 import IconPlus from './IconPlus.svg';
+import IconRedArrow from './IconRedArrow';
+import IconGreenArrow from './IconGreenArrow.svg';
+import Icon3dots from './Icon3dots.svg';
+import IconFilter from './IconFilter.svg';
 
 export {
   IconEye,
@@ -28,4 +32,8 @@ export {
   IconArrow,
   IconMin,
   IconPlus,
+  IconRedArrow,
+  IconGreenArrow,
+  Icon3dots,
+  IconFilter,
 };

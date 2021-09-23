@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, TouchableOpacity, View} from 'react-native';
+import {Text, TouchableOpacity} from 'react-native';
 import {
   IconEye,
   IconNotification,
@@ -23,99 +23,81 @@ const IconOnly = ({icon, onPress}) => {
       return <IconEye />;
     } else if (icon === 'icon-notification') {
       return (
-        <IconNotification
-          onPress={() => {
-            alert('notification');
-          }}
-        />
+        <TouchableOpacity onPress={onPress}>
+          <IconNotification />
+        </TouchableOpacity>
       );
     } else if (icon === 'icon-dashboard') {
       return (
-        <IconDashboard
-          onPress={() => {
-            alert('dashboard');
-          }}
-        />
+        <TouchableOpacity onPress={onPress}>
+          <IconDashboard />
+        </TouchableOpacity>
       );
     } else if (icon === 'icon-analytics') {
       return (
-        <IconAnalytics
-          onPress={() => {
-            alert('analytics');
-          }}
-        />
+        <TouchableOpacity onPress={onPress}>
+          <IconAnalytics />
+        </TouchableOpacity>
       );
     } else if (icon === 'icon-customer') {
       return (
-        <IconCustomer
-          onPress={() => {
-            alert('customer');
-          }}
-        />
+        <TouchableOpacity onPress={onPress}>
+          <IconCustomer />
+        </TouchableOpacity>
       );
     } else if (icon === 'icon-product') {
       return (
-        <IconProduct
-          onPress={() => {
-            alert('product');
-          }}
-        />
+        <TouchableOpacity onPress={onPress}>
+          <IconProduct />
+        </TouchableOpacity>
       );
     } else if (icon === 'icon-coupon') {
       return (
-        <IconCoupon
-          onPress={() => {
-            alert('coupon');
-          }}
-        />
+        <TouchableOpacity onPress={onPress}>
+          <IconCoupon />
+        </TouchableOpacity>
       );
     } else if (icon === 'icon-employee') {
       return (
-        <IconEmployee
-          onPress={() => {
-            alert('employee');
-          }}
-        />
+        <TouchableOpacity onPress={onPress}>
+          <IconEmployee />
+        </TouchableOpacity>
       );
     } else if (icon === 'icon-setting') {
       return (
-        <IconSettings
-          onPress={() => {
-            alert('setting');
-          }}
-        />
+        <TouchableOpacity onPress={onPress}>
+          <IconSettings />
+        </TouchableOpacity>
       );
     } else if (icon === 'icon-clear') {
       return (
-        <IconClear
-          onPress={() => {
-            alert('clear');
-          }}
-        />
+        <TouchableOpacity onPress={onPress}>
+          <IconClear />
+        </TouchableOpacity>
       );
     } else if (icon === 'icon-arrow') {
       return (
-        <IconArrow
-          onPress={() => {
-            alert('arrow');
-          }}
-        />
+        <TouchableOpacity onPress={onPress}>
+          <IconArrow />
+        </TouchableOpacity>
       );
     } else if (icon === 'icon-min') {
       return (
-        <IconMin
-          onPress={() => {
-            alert('min');
-          }}
-        />
+        <TouchableOpacity onPress={onPress}>
+          <IconMin />
+        </TouchableOpacity>
       );
     } else if (icon === 'icon-plus') {
       return (
-        <IconPlus
-          onPress={() => {
-            alert('plus');
-          }}
-        />
+        <TouchableOpacity onPress={onPress}>
+          <IconPlus />
+        </TouchableOpacity>
+      );
+    } else {
+      return (
+        <TouchableOpacity>
+          <Text>No Icon</Text>
+        </TouchableOpacity>
       );
     }
   };

@@ -1,16 +1,18 @@
+import {useNavigation} from '@react-navigation/core';
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import {IconEye, ILLogin} from '../../assets';
 import {Button, CheckBox, Gap, Link, TextInput} from '../../components';
 
-const Login = () => {
+const Login = ({navigation}) => {
+  // const navigation = useNavigation();
   return (
     <View style={styles.page}>
       <Image source={ILLogin} style={styles.illustration} />
       <View style={styles.text}>
-        <TextInput style={styles.Email} label="Email" />
+        <TextInput style={styles.email} label="Email" />
         <Gap height={23} />
-        <TextInput label="Password" secureTextEntry type="password" />
+        <TextInput label="Password" type="password" />
       </View>
       <View style={styles.forgotPassword}>
         <CheckBox style={styles.Ingat} label="Ingat saya" />
@@ -19,7 +21,10 @@ const Login = () => {
         {/* <IconEye /> */}
       </View>
       <View style={styles.containerButton}>
-        <Button label="Sign In" />
+        <Button
+          label="Sign In"
+          onPress={() => navigation.navigate('Dashboard')}
+        />
         <Gap width={45} />
         <Text>Or</Text>
         <Gap width={45} />
@@ -52,4 +57,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   text: {},
+  email: {
+    flex: 1,
+  },
 });
