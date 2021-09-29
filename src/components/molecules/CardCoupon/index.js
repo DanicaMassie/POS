@@ -1,10 +1,10 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import {IconSearch, Icon3dots, IconFilter} from '../../../assets';
 import {Gap} from '../../atoms';
-import ProductsList from './ProductsList';
+import CouponList from './CouponList';
 
-const CardProducts = () => {
+const CardCoupon = () => {
   return (
     <View style={styles.container}>
       <View
@@ -14,7 +14,7 @@ const CardProducts = () => {
           justifyContent: 'space-between',
           marginBottom: 5,
         }}>
-        <Text style={{fontWeight: 'bold', fontSize: 16}}>Products</Text>
+        <Text style={{fontWeight: 'bold', fontSize: 16}}>Coupon</Text>
         <View
           style={{
             backgroundColor: '#39A2DB',
@@ -24,11 +24,10 @@ const CardProducts = () => {
             justifyContent: 'center',
             alignItems: 'center',
           }}>
-          <Text>Add Products</Text>
+          <Text>Create New</Text>
         </View>
       </View>
       <Gap height={10} />
-
       <View style={styles.containerCustomer}>
         <View style={styles.list}>
           <View style={styles.topContainer}>
@@ -42,19 +41,20 @@ const CardProducts = () => {
           <Gap height={30} />
           <View style={styles.customer}>
             <Text style={styles.spaceLeft}>ID </Text>
-            <Text style={styles.spaceTop}>Item</Text>
-            <Text style={styles.spaceTop}>Category</Text>
-            <Text style={styles.spaceTop}>Price</Text>
-            <Text style={styles.spaceTop}>Description</Text>
+            <Text style={styles.spaceTop}>Code</Text>
+            <Text style={styles.spaceTop}>Discount</Text>
+            <Text style={styles.spaceTop}>Start Date</Text>
+            <Text style={styles.spaceTop}>End Date</Text>
+            <Text style={styles.spaceTop}>Active</Text>
           </View>
           <Gap height={5} />
-          <ProductsList />
+          <CouponList />
         </View>
       </View>
     </View>
   );
 };
-export default CardProducts;
+export default CardCoupon;
 
 const styles = StyleSheet.create({
   container: {

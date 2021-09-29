@@ -10,6 +10,7 @@ import {
   TouchableWithoutFeedback,
   TouchableOpacity,
 } from 'react-native';
+import {Icon3dots} from '../../../assets';
 
 const DATA = [
   {
@@ -18,7 +19,6 @@ const DATA = [
     category: '17 Mei 2021',
     price: 'Rp. 30.000',
     description: '......................',
-    icon: '.',
   },
   {
     id: 'XXX2',
@@ -26,7 +26,6 @@ const DATA = [
     category: '17 Mei 2021',
     price: 'Rp. 30.000',
     description: '......................',
-    icon: '.',
   },
   {
     id: 'XXX3',
@@ -34,7 +33,6 @@ const DATA = [
     category: '17 Mei 2021',
     price: 'Rp. 30.000',
     description: '......................',
-    icon: '.',
   },
   {
     id: 'XXX4',
@@ -42,7 +40,6 @@ const DATA = [
     category: '17 Mei 2021',
     price: 'Rp. 30.000',
     description: '......................',
-    icon: '.',
   },
   {
     id: 'XXX5',
@@ -50,7 +47,6 @@ const DATA = [
     category: '17 Mei 2021',
     price: 'Rp. 30.000',
     description: '......................',
-    icon: '.',
   },
   {
     id: 'XXX6',
@@ -58,15 +54,12 @@ const DATA = [
     category: '17 Mei 2021',
     price: 'Rp. 30.000',
     description: '......................',
-    icon: '.',
   },
   {
     id: 'XXX7',
     name: 'Nasi Goreng',
     category: '17 Mei 2021',
     price: 'Rp. 30.000',
-    description: '......................',
-    icon: '.',
   },
   {
     id: 'XXX8',
@@ -74,7 +67,6 @@ const DATA = [
     category: '17 Mei 2021',
     price: 'Rp. 30.000',
     description: '......................',
-    icon: '.',
   },
   {
     id: 'XXX9',
@@ -82,7 +74,6 @@ const DATA = [
     category: '17 Mei 2021',
     price: 'Rp. 30.000',
     description: '......................',
-    icon: '.',
   },
   {
     id: 'XXX10',
@@ -90,14 +81,13 @@ const DATA = [
     category: '17 Mei 2021',
     price: 'Rp. 30.000',
     description: '......................',
-    icon: '.',
   },
   {
+    id: 'XXX11',
     name: 'Nasi Goreng',
     category: '17 Mei 2021',
     price: 'Rp. 30.000',
     description: '......................',
-    icon: '.',
   },
   {
     id: 'XXX12',
@@ -105,18 +95,19 @@ const DATA = [
     category: '17 Mei 2021',
     price: 'Rp. 30.000',
     description: '......................',
-    icon: '.',
   },
 ];
 
-const Menu = ({name, number, category, price, description, icon}) => (
+const Menu = ({name, number, category, price, description}) => (
   <TouchableOpacity style={styles.item}>
     <Text style={styles.numberContainer}>{number}</Text>
     <Text style={styles.space}>{name}</Text>
     <Text style={styles.space}>{category}</Text>
     <Text style={styles.space}>{price}</Text>
     <Text style={styles.space}>{description}</Text>
-    <Text style={styles.space}>{icon}</Text>
+    <TouchableOpacity>
+      <Icon3dots />
+    </TouchableOpacity>
   </TouchableOpacity>
 );
 
@@ -128,7 +119,6 @@ const ProductsList = () => {
       category={item.category}
       price={item.price}
       description={item.description}
-      icon={item.icon}
     />
   );
 

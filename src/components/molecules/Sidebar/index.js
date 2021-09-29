@@ -30,25 +30,19 @@ const Sidebar = () => {
       <Button
         type="icon-only"
         icon="icon-coupon"
-        onPress={() => {
-          console.log('coupon');
-        }}
+        onPress={() => navigation.navigate('Coupon')}
       />
       <Button
         type="icon-only"
         icon="icon-employee"
-        onPress={() => {
-          console.log('employee');
-        }}
+        onPress={() => navigation.navigate('Employee')}
       />
       <View
         style={{flex: 1, backgroundColor: 'white', justifyContent: 'flex-end'}}>
         <Button
           type="icon-only"
           icon="icon-setting"
-          onPress={() => {
-            console.log('setting');
-          }}
+          onPress={() => navigation.navigate('Setting')}
         />
       </View>
     </View>

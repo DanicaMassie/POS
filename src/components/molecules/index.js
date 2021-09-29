@@ -4,6 +4,8 @@ import CardDashboard from './CardDashboard';
 import CardAnalytics from './CardAnalytics';
 import CardCustomer from './CardCustomer';
 import CardProducts from './CardProducts';
+import CardCoupon from './CardCoupon';
+import CardEmployee from './CardEmployee';
 
 export {
   Header,
@@ -12,4 +14,6 @@ export {
   CardAnalytics,
   CardCustomer,
   CardProducts,
+  CardCoupon,
+  CardEmployee,
 };

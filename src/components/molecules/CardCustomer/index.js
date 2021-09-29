@@ -10,6 +10,8 @@ const CardCustomer = () => {
       <View style={{width: '100%'}}>
         <Text style={{fontWeight: 'bold', fontSize: 16}}>Customers</Text>
       </View>
+      <Gap height={10} />
+
       <View style={styles.containerCustomer}>
         <View style={styles.list}>
           <View style={styles.topContainer}>
