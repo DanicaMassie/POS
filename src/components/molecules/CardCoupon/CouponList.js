@@ -95,8 +95,12 @@ const Menu = ({Code, number, discount, startDate, endDate}) => (
     <Text style={styles.space}>{discount}</Text>
     <Text style={styles.space}>{startDate}</Text>
     <Text style={styles.space}>{endDate}</Text>
-    <IconTogle />
-    <Icon3dots />
+    <TouchableOpacity>
+      <IconTogle />
+    </TouchableOpacity>
+    <TouchableOpacity>
+      <Icon3dots />
+    </TouchableOpacity>
   </TouchableOpacity>
 );
 

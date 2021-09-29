@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet, YellowBox} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import {IconSearch, Icon3dots, IconFilter} from '../../../assets';
 import Customerlist from './CustomerList';
 import {Gap} from '../../atoms';
@@ -19,8 +19,12 @@ const CardCustomer = () => {
               <IconSearch />
               <Text style={styles.searchText}>Search Here...</Text>
             </View>
-            <IconFilter />
-            <Icon3dots />
+            <TouchableOpacity>
+              <IconFilter />
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Icon3dots />
+            </TouchableOpacity>
           </View>
           <Gap height={30} />
           <View style={styles.customer}>

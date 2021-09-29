@@ -1,31 +1,41 @@
-import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import React, {useState} from 'react';
+import {View, Text, StyleSheet, FlatList} from 'react-native';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 import {IconSearch, Icon3dots, IconFilter} from '../../../assets';
-import {Gap} from '../../atoms';
+import {Gap, Button} from '../../atoms';
 import ProductsList from './ProductsList';
 
 const CardProducts = () => {
+  const [selectedId, setSelectedId] = useState();
+  const ButtonType = ({item}) => {
+    const color = item.id === selectedId ? '#39A2DB' : 'white';
+    const textColor = item.id === selectedId ? 'white' : 'black';
+    return (
+      <TouchableOpacity
+        onPress={() => setSelectedId(item.id)}
+        style={styles.buttonText(color)}>
+        <Text style={styles.varianText(textColor)}>{item.name}</Text>
+      </TouchableOpacity>
+    );
+  };
   return (
     <View style={styles.container}>
-      <View
-        style={{
-          width: '100%',
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          marginBottom: 5,
-        }}>
+      <View style={styles.product}>
         <Text style={{fontWeight: 'bold', fontSize: 16}}>Products</Text>
-        <View
-          style={{
-            backgroundColor: '#39A2DB',
-            width: 90,
-            height: 25,
-            borderRadius: 8,
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}>
-          <Text>Add Products</Text>
+        <View style={styles.add}>
+          <FlatList
+            horizontal
+            data={[{name: 'Add Product', id: 1}]}
+            renderItem={ButtonType}
+            keyExtractor={item => item.id}
+          />
         </View>
+        <TouchableOpacity style={styles.add}>
+          <Text>Add Products</Text>
+        </TouchableOpacity>
+
+        {/* <Gap height={8} />
+          <Button label="Place Order" /> */}
       </View>
       <Gap height={10} />
 
@@ -36,8 +46,12 @@ const CardProducts = () => {
               <IconSearch />
               <Text style={styles.searchText}>Search Here...</Text>
             </View>
-            <IconFilter />
-            <Icon3dots />
+            <TouchableOpacity>
+              <IconFilter />
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Icon3dots />
+            </TouchableOpacity>
           </View>
           <Gap height={30} />
           <View style={styles.customer}>
@@ -75,6 +89,18 @@ const styles = StyleSheet.create({
   topContainer: {
     flexDirection: 'row',
     justifyContent: 'center',
+    alignItems: 'center',
+  },
+  product: {
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 5,
+  },
+  add: {
+    // flexDirection: 'row',
+    width: '100%',
+    height: 30,
     alignItems: 'center',
   },
   containerSearch: {
@@ -122,4 +148,19 @@ const styles = StyleSheet.create({
     fontSize: 14,
     marginLeft: 5,
   },
+
+  buttonText: color => ({
+    width: 90,
+    height: 30,
+    borderRadius: 8,
+    borderWidth: 2,
+    borderColor: '#39A2DB',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginHorizontal: 15,
+    backgroundColor: color,
+  }),
+  varianText: color => ({
+    color: color,
+  }),
 });

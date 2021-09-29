@@ -7,25 +7,11 @@ import CouponList from './CouponList';
 const CardCoupon = () => {
   return (
     <View style={styles.container}>
-      <View
-        style={{
-          width: '100%',
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          marginBottom: 5,
-        }}>
+      <View style={styles.coupon}>
         <Text style={{fontWeight: 'bold', fontSize: 16}}>Coupon</Text>
-        <View
-          style={{
-            backgroundColor: '#39A2DB',
-            width: 90,
-            height: 25,
-            borderRadius: 8,
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}>
+        <TouchableOpacity style={styles.create}>
           <Text>Create New</Text>
-        </View>
+        </TouchableOpacity>
       </View>
       <Gap height={10} />
       <View style={styles.containerCustomer}>
@@ -35,8 +21,12 @@ const CardCoupon = () => {
               <IconSearch />
               <Text style={styles.searchText}>Search Here...</Text>
             </View>
-            <IconFilter />
-            <Icon3dots />
+            <TouchableOpacity>
+              <IconFilter />
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Icon3dots />
+            </TouchableOpacity>
           </View>
           <Gap height={30} />
           <View style={styles.customer}>
@@ -74,6 +64,20 @@ const styles = StyleSheet.create({
   },
   topContainer: {
     flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  coupon: {
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 5,
+  },
+  create: {
+    backgroundColor: '#39A2DB',
+    width: 90,
+    height: 25,
+    borderRadius: 8,
     justifyContent: 'center',
     alignItems: 'center',
   },

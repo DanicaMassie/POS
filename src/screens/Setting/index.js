@@ -1,5 +1,5 @@
 import React from 'react';
-import {BackHandler, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {Header, Sidebar} from '../../components';
 
 const Products = () => {

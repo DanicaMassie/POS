@@ -17,7 +17,8 @@ import IconGreenArrow from './IconGreenArrow.svg';
 import Icon3dots from './Icon3dots.svg';
 import IconFilter from './IconFilter.svg';
 import IconTogle from './IconTogle';
-
+import IconEdit from './IconEdit.svg';
+import IconAdd from './IconAdd.svg';
 export {
   IconEye,
   IconNotification,
@@ -38,4 +39,6 @@ export {
   Icon3dots,
   IconFilter,
   IconTogle,
+  IconEdit,
+  IconAdd,
 };

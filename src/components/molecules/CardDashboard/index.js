@@ -146,17 +146,6 @@ const CardDashboard = () => {
                 renderItem={PaymentType}
                 keyExtractor={item => item.id}
               />
-              {/* <TouchableOpacity style={styles.buttonText}>
-                <Text>Cash</Text>
-              </TouchableOpacity>
-              <Gap width={20} />
-              <TouchableOpacity style={styles.buttonText}>
-                <Text>Card</Text>
-              </TouchableOpacity>
-              <Gap width={20} />
-              <TouchableOpacity style={styles.buttonText}>
-                <Text>E-Wallet</Text>
-              </TouchableOpacity> */}
             </View>
             <Gap height={8} />
             <Button label="Place Order" />
@@ -302,7 +291,6 @@ const styles = StyleSheet.create({
     height: 30,
     alignItems: 'center',
   },
-
   buttonText: color => ({
     width: 80,
     height: 30,

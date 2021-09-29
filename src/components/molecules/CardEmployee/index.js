@@ -1,22 +1,28 @@
 import React from 'react';
 import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import {Gap} from '../../atoms';
-import {ProfilePict} from '../../../assets';
+import {ProfilePict, IconAdd, IconEdit} from '../../../assets';
 
 const CardEmployee = () => {
   return (
     <View style={styles.container}>
       <View style={styles.topLine}>
         <Text style={{fontWeight: 'bold', fontSize: 16}}>Employee Shift</Text>
-        <TouchableOpacity>
-          <View style={styles.create}>
-            <Text>Create New</Text>
-          </View>
+        <TouchableOpacity style={styles.create}>
+          <Text>Create New</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.container1}>
-        {/* <Gap height={8} /> */}
-        <Text style={styles.textVarian}>Shift 1 (06.00 AM - 12.00 AM)</Text>
+        <View style={styles.shift}>
+          <Text style={styles.textVarian}>Shift 1 (06.00 AM - 12.00 AM)</Text>
+          <Gap width={760} />
+          <TouchableOpacity>
+            <IconEdit />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <IconAdd />
+          </TouchableOpacity>
+        </View>
         <View style={styles.firstContainer}>
           <View style={styles.containerSmallCard}>
             <Image source={ProfilePict} style={styles.Pict} />
@@ -24,13 +30,13 @@ const CardEmployee = () => {
               <Text style={styles.textVarian}>Kim Seon Ho</Text>
               <Gap height={10} />
               <View style={styles.text}>
-                <View style={styles.admin}>
+                <TouchableOpacity style={styles.admin}>
                   <Text>Admin</Text>
-                </View>
+                </TouchableOpacity>
                 <Gap width={10} />
-                <View style={styles.detail}>
+                <TouchableOpacity style={styles.detail}>
                   <Text>Detail</Text>
-                </View>
+                </TouchableOpacity>
               </View>
             </View>
           </View>
@@ -40,13 +46,13 @@ const CardEmployee = () => {
               <Text style={styles.textVarian}>Lee Jung Suk</Text>
               <Gap height={10} />
               <View style={styles.text}>
-                <View style={styles.cashier}>
+                <TouchableOpacity style={styles.cashier}>
                   <Text>Cashier</Text>
-                </View>
+                </TouchableOpacity>
                 <Gap width={10} />
-                <View style={styles.detail}>
+                <TouchableOpacity style={styles.detail}>
                   <Text>Detail</Text>
-                </View>
+                </TouchableOpacity>
               </View>
             </View>
           </View>
@@ -56,13 +62,13 @@ const CardEmployee = () => {
               <Text style={styles.textVarian}>Kim So Hyun</Text>
               <Gap height={10} />
               <View style={styles.text}>
-                <View style={styles.chef}>
+                <TouchableOpacity style={styles.chef}>
                   <Text>Chef</Text>
-                </View>
+                </TouchableOpacity>
                 <Gap width={10} />
-                <View style={styles.detail}>
+                <TouchableOpacity style={styles.detail}>
                   <Text>Detail</Text>
-                </View>
+                </TouchableOpacity>
               </View>
             </View>
           </View>
@@ -72,13 +78,13 @@ const CardEmployee = () => {
               <Text style={styles.textVarian}>Song Jong Ki</Text>
               <Gap height={10} />
               <View style={styles.text}>
-                <View style={styles.chef}>
+                <TouchableOpacity style={styles.chef}>
                   <Text>Chef</Text>
-                </View>
+                </TouchableOpacity>
                 <Gap width={10} />
-                <View style={styles.detail}>
+                <TouchableOpacity style={styles.detail}>
                   <Text>Detail</Text>
-                </View>
+                </TouchableOpacity>
               </View>
             </View>
           </View>
@@ -90,13 +96,13 @@ const CardEmployee = () => {
               <Text style={styles.textVarian}>Lee Dong Wook</Text>
               <Gap height={10} />
               <View style={styles.text}>
-                <View style={styles.waitress}>
+                <TouchableOpacity style={styles.waitress}>
                   <Text>Waitress</Text>
-                </View>
+                </TouchableOpacity>
                 <Gap width={10} />
-                <View style={styles.detail}>
+                <TouchableOpacity style={styles.detail}>
                   <Text>Detail</Text>
-                </View>
+                </TouchableOpacity>
               </View>
             </View>
           </View>
@@ -106,13 +112,13 @@ const CardEmployee = () => {
               <Text style={styles.textVarian}>Gong Yo</Text>
               <Gap height={10} />
               <View style={styles.text}>
-                <View style={styles.waitress}>
+                <TouchableOpacity style={styles.waitress}>
                   <Text>Waitress</Text>
-                </View>
+                </TouchableOpacity>
                 <Gap width={10} />
-                <View style={styles.detail}>
+                <TouchableOpacity style={styles.detail}>
                   <Text>Detail</Text>
-                </View>
+                </TouchableOpacity>
               </View>
             </View>
           </View>
@@ -122,13 +128,13 @@ const CardEmployee = () => {
               <Text style={styles.textVarian}>Ji Chang Wook</Text>
               <Gap height={10} />
               <View style={styles.text}>
-                <View style={styles.waitress}>
+                <TouchableOpacity style={styles.waitress}>
                   <Text>Waitress</Text>
-                </View>
+                </TouchableOpacity>
                 <Gap width={10} />
-                <View style={styles.detail}>
+                <TouchableOpacity style={styles.detail}>
                   <Text>Detail</Text>
-                </View>
+                </TouchableOpacity>
               </View>
             </View>
           </View>
@@ -138,21 +144,29 @@ const CardEmployee = () => {
               <Text style={styles.textVarian}>Hyun Bin</Text>
               <Gap height={10} />
               <View style={styles.text}>
-                <View style={styles.waitress}>
+                <TouchableOpacity style={styles.waitress}>
                   <Text>Waitress</Text>
-                </View>
+                </TouchableOpacity>
                 <Gap width={10} />
-                <View style={styles.detail}>
+                <TouchableOpacity style={styles.detail}>
                   <Text>Detail</Text>
-                </View>
+                </TouchableOpacity>
               </View>
             </View>
           </View>
         </View>
       </View>
       <View style={styles.container1}>
-        <Gap height={8} />
-        <Text style={styles.textVarian}>Shift 2 (12.00 AM - 18.00 PM)</Text>
+        <View style={styles.shift}>
+          <Text style={styles.textVarian}>Shift 2 (12.00 AM - 18.00 PM)</Text>
+          <Gap width={760} />
+          <TouchableOpacity>
+            <IconEdit />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <IconAdd />
+          </TouchableOpacity>
+        </View>
         <View style={styles.firstContainer}>
           <View style={styles.containerSmallCard}>
             <Image source={ProfilePict} style={styles.Pict} />
@@ -160,13 +174,13 @@ const CardEmployee = () => {
               <Text style={styles.textVarian}>Kim Seon Ho</Text>
               <Gap height={10} />
               <View style={styles.text}>
-                <View style={styles.admin}>
+                <TouchableOpacity style={styles.admin}>
                   <Text>Admin</Text>
-                </View>
+                </TouchableOpacity>
                 <Gap width={10} />
-                <View style={styles.detail}>
+                <TouchableOpacity style={styles.detail}>
                   <Text>Detail</Text>
-                </View>
+                </TouchableOpacity>
               </View>
             </View>
           </View>
@@ -176,13 +190,13 @@ const CardEmployee = () => {
               <Text style={styles.textVarian}>Lee Jung Suk</Text>
               <Gap height={10} />
               <View style={styles.text}>
-                <View style={styles.cashier}>
+                <TouchableOpacity style={styles.cashier}>
                   <Text>Cashier</Text>
-                </View>
+                </TouchableOpacity>
                 <Gap width={10} />
-                <View style={styles.detail}>
+                <TouchableOpacity style={styles.detail}>
                   <Text>Detail</Text>
-                </View>
+                </TouchableOpacity>
               </View>
             </View>
           </View>
@@ -192,13 +206,13 @@ const CardEmployee = () => {
               <Text style={styles.textVarian}>Kim So Hyun</Text>
               <Gap height={10} />
               <View style={styles.text}>
-                <View style={styles.chef}>
+                <TouchableOpacity style={styles.chef}>
                   <Text>Chef</Text>
-                </View>
+                </TouchableOpacity>
                 <Gap width={10} />
-                <View style={styles.detail}>
+                <TouchableOpacity style={styles.detail}>
                   <Text>Detail</Text>
-                </View>
+                </TouchableOpacity>
               </View>
             </View>
           </View>
@@ -208,13 +222,13 @@ const CardEmployee = () => {
               <Text style={styles.textVarian}>Song Jong Ki</Text>
               <Gap height={10} />
               <View style={styles.text}>
-                <View style={styles.chef}>
+                <TouchableOpacity style={styles.chef}>
                   <Text>Chef</Text>
-                </View>
+                </TouchableOpacity>
                 <Gap width={10} />
-                <View style={styles.detail}>
+                <TouchableOpacity style={styles.detail}>
                   <Text>Detail</Text>
-                </View>
+                </TouchableOpacity>
               </View>
             </View>
           </View>
@@ -226,13 +240,13 @@ const CardEmployee = () => {
               <Text style={styles.textVarian}>Lee Dong Wook</Text>
               <Gap height={10} />
               <View style={styles.text}>
-                <View style={styles.waitress}>
+                <TouchableOpacity style={styles.waitress}>
                   <Text>Waitress</Text>
-                </View>
+                </TouchableOpacity>
                 <Gap width={10} />
-                <View style={styles.detail}>
+                <TouchableOpacity style={styles.detail}>
                   <Text>Detail</Text>
-                </View>
+                </TouchableOpacity>
               </View>
             </View>
           </View>
@@ -242,13 +256,13 @@ const CardEmployee = () => {
               <Text style={styles.textVarian}>Gong Yo</Text>
               <Gap height={10} />
               <View style={styles.text}>
-                <View style={styles.waitress}>
+                <TouchableOpacity style={styles.waitress}>
                   <Text>Waitress</Text>
-                </View>
+                </TouchableOpacity>
                 <Gap width={10} />
-                <View style={styles.detail}>
+                <TouchableOpacity style={styles.detail}>
                   <Text>Detail</Text>
-                </View>
+                </TouchableOpacity>
               </View>
             </View>
           </View>
@@ -258,13 +272,13 @@ const CardEmployee = () => {
               <Text style={styles.textVarian}>Ji Chang Wook</Text>
               <Gap height={10} />
               <View style={styles.text}>
-                <View style={styles.waitress}>
+                <TouchableOpacity style={styles.waitress}>
                   <Text>Waitress</Text>
-                </View>
+                </TouchableOpacity>
                 <Gap width={10} />
-                <View style={styles.detail}>
+                <TouchableOpacity style={styles.detail}>
                   <Text>Detail</Text>
-                </View>
+                </TouchableOpacity>
               </View>
             </View>
           </View>
@@ -274,13 +288,13 @@ const CardEmployee = () => {
               <Text style={styles.textVarian}>Hyun Bin</Text>
               <Gap height={10} />
               <View style={styles.text}>
-                <View style={styles.waitress}>
+                <TouchableOpacity style={styles.waitress}>
                   <Text>Waitress</Text>
-                </View>
+                </TouchableOpacity>
                 <Gap width={10} />
-                <View style={styles.detail}>
+                <TouchableOpacity style={styles.detail}>
                   <Text>Detail</Text>
-                </View>
+                </TouchableOpacity>
               </View>
             </View>
           </View>
@@ -319,11 +333,16 @@ const styles = StyleSheet.create({
   container1: {
     backgroundColor: 'white',
     // justifyContent: 'center',
-    alignItems: 'center',
+    // alignItems: 'center',
     flex: 1,
     margin: 20,
     // padding: 15,
     borderRadius: 8,
+  },
+  shift: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginLeft: 20,
   },
   firstContainer: {
     // backgroundColor: 'grey',
