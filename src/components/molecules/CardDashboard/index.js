@@ -100,8 +100,10 @@ const CardDashboard = () => {
               onPress={() => {
                 console.log('heheheheh');
               }}>
-              <Text style={styles.clearAll}>Clear All</Text>
-              <Button type="icon-only" icon="icon-clear" />
+              <View style={styles.clear}>
+                <Text style={styles.clearAll}>Clear All</Text>
+                <Button type="icon-only" icon="icon-clear" />
+              </View>
             </TouchableOpacity>
           </View>
           <OrderList />
@@ -237,9 +239,13 @@ const styles = StyleSheet.create({
   textSize: {
     fontSize: 14,
   },
+  clear: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginLeft: 195,
+  },
   clearAll: {
     color: 'red',
-    marginLeft: 190,
     fontSize: 14,
   },
   containerPromo: {

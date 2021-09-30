@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {Header, Sidebar} from '../../components';
+import {Header, Sidebar, CardSetting} from '../../components';
 
 const Products = () => {
   return (
@@ -8,6 +8,7 @@ const Products = () => {
       <Header />
       <View style={styles.row}>
         <Sidebar />
+        <CardSetting />
       </View>
     </View>
   );
