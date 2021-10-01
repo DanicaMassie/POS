@@ -7,6 +7,7 @@ import CardProducts from './CardProducts';
 import CardCoupon from './CardCoupon';
 import CardEmployee from './CardEmployee';
 import CardSetting from './CardSetting';
+import CardEditProduct from './CardEditProduct';
 
 export {
   Header,
@@ -18,4 +19,5 @@ export {
   CardCoupon,
   CardEmployee,
   CardSetting,
+  CardEditProduct,
 };

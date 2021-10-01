@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
     padding: 8,
     width: 708,
     height: 300,
-    backgroundColor: 'yellow',
+    backgroundColor: 'white',
     // marginTop: 25,
     // marginLeft: 5,
     margin: 10,

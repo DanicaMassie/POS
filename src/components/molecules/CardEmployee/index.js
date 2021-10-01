@@ -9,7 +9,7 @@ const CardEmployee = () => {
       <View style={styles.topLine}>
         <Text style={{fontWeight: 'bold', fontSize: 16}}>Employee Shift</Text>
         <TouchableOpacity style={styles.create}>
-          <Text>Create New</Text>
+          <Text style={styles.varianText}>Create New</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.container1}>
@@ -421,5 +421,8 @@ const styles = StyleSheet.create({
   textVarian: {
     fontWeight: 'bold',
     fontSize: 16,
+  },
+  varianText: {
+    color: 'white',
   },
 });

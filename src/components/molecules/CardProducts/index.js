@@ -1,3 +1,4 @@
+import {useNavigation} from '@react-navigation/core';
 import React, {useState} from 'react';
 import {View, Text, StyleSheet, FlatList} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
@@ -6,36 +7,21 @@ import {Gap, Button} from '../../atoms';
 import ProductsList from './ProductsList';
 
 const CardProducts = () => {
-  const [selectedId, setSelectedId] = useState();
-  const ButtonType = ({item}) => {
-    const color = item.id === selectedId ? '#39A2DB' : 'white';
-    const textColor = item.id === selectedId ? 'white' : 'black';
-    return (
-      <TouchableOpacity
-        onPress={() => setSelectedId(item.id)}
-        style={styles.buttonText(color)}>
-        <Text style={styles.varianText(textColor)}>{item.name}</Text>
-      </TouchableOpacity>
-    );
-  };
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <View style={styles.product}>
         <Text style={{fontWeight: 'bold', fontSize: 16}}>Products</Text>
         <View style={styles.add}>
-          <FlatList
-            horizontal
-            data={[{name: 'Add Product', id: 1}]}
-            renderItem={ButtonType}
-            keyExtractor={item => item.id}
-          />
+          <TouchableOpacity
+            onPress={() => navigation.navigate('EditProduct')}
+            style={styles.buttonText}>
+            <Text style={styles.varianText}>Add Product</Text>
+          </TouchableOpacity>
         </View>
         <TouchableOpacity style={styles.add}>
           <Text>Add Products</Text>
         </TouchableOpacity>
-
-        {/* <Gap height={8} />
-          <Button label="Place Order" /> */}
       </View>
       <Gap height={10} />
 
@@ -102,6 +88,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 30,
     alignItems: 'center',
+    marginLeft: 450,
   },
   containerSearch: {
     backgroundColor: '#F7F7FC',
@@ -148,19 +135,16 @@ const styles = StyleSheet.create({
     fontSize: 14,
     marginLeft: 5,
   },
-
-  buttonText: color => ({
+  buttonText: {
     width: 90,
-    height: 30,
+    height: 25,
     borderRadius: 8,
-    borderWidth: 2,
-    borderColor: '#39A2DB',
     alignItems: 'center',
     justifyContent: 'center',
     marginHorizontal: 15,
-    backgroundColor: color,
-  }),
-  varianText: color => ({
-    color: color,
-  }),
+    backgroundColor: '#39A2DB',
+  },
+  varianText: {
+    color: 'white',
+  },
 });

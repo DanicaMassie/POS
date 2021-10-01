@@ -9,6 +9,7 @@ import {
   Coupon,
   Employee,
   Setting,
+  EditProduct,
 } from '../screens';
 
 const Stack = createStackNavigator();
@@ -53,6 +54,11 @@ const Router = () => {
       <Stack.Screen
         name="Setting"
         component={Setting}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="EditProduct"
+        component={EditProduct}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

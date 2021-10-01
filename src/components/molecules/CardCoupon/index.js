@@ -10,7 +10,7 @@ const CardCoupon = () => {
       <View style={styles.coupon}>
         <Text style={{fontWeight: 'bold', fontSize: 16}}>Coupon</Text>
         <TouchableOpacity style={styles.create}>
-          <Text>Create New</Text>
+          <Text style={styles.varianText}>Create New</Text>
         </TouchableOpacity>
       </View>
       <Gap height={10} />
@@ -125,5 +125,8 @@ const styles = StyleSheet.create({
   searchText: {
     fontSize: 14,
     marginLeft: 5,
+  },
+  varianText: {
+    color: 'white',
   },
 });

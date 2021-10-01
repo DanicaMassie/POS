@@ -6,6 +6,7 @@ import Products from './Products';
 import Coupon from './Coupon';
 import Employee from './Employee';
 import Setting from './Setting';
+import EditProduct from './EditProduct';
 
 export {
   Login,
@@ -16,4 +17,5 @@ export {
   Coupon,
   Employee,
   Setting,
+  EditProduct,
 };

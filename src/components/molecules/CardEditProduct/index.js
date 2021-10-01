@@ -3,12 +3,10 @@ import {View, TouchableOpacity, Text, StyleSheet, Image} from 'react-native';
 import {Menu1} from '../../../assets';
 import {Gap} from '../../atoms';
 
-const CardSetting = () => {
+const CardEditProduct = () => {
   return (
     <View style={styles.firstContainer}>
-      <Text style={{fontWeight: 'bold', fontSize: 16}}>
-        Business Information
-      </Text>
+      <Text style={{fontWeight: 'bold', fontSize: 16}}>Edit Product</Text>
       <Gap height={10} />
       <View style={styles.secContainer}>
         <View style={styles.cardContainer1}>
@@ -85,7 +83,7 @@ const CardSetting = () => {
     </View>
   );
 };
-export default CardSetting;
+export default CardEditProduct;
 
 const styles = StyleSheet.create({
   firstContainer: {
