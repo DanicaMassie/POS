@@ -95,10 +95,10 @@ const Menu = ({Code, number, discount, startDate, endDate}) => (
     <Text style={styles.space}>{discount}</Text>
     <Text style={styles.space}>{startDate}</Text>
     <Text style={styles.space}>{endDate}</Text>
-    <TouchableOpacity>
+    <TouchableOpacity style={styles.icon}>
       <IconTogle />
     </TouchableOpacity>
-    <TouchableOpacity>
+    <TouchableOpacity style={styles.icon}>
       <Icon3dots />
     </TouchableOpacity>
   </TouchableOpacity>
@@ -147,6 +147,9 @@ const styles = StyleSheet.create({
   space: {
     width: 200,
     // backgroundColor: 'red',
+  },
+  icon: {
+    width: 100,
   },
 });
 

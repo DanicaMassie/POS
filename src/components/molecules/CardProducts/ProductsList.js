@@ -105,7 +105,7 @@ const Menu = ({name, number, category, price, description}) => (
     <Text style={styles.space}>{category}</Text>
     <Text style={styles.space}>{price}</Text>
     <Text style={styles.space}>{description}</Text>
-    <TouchableOpacity>
+    <TouchableOpacity style={styles.icon}>
       <Icon3dots />
     </TouchableOpacity>
   </TouchableOpacity>
@@ -153,6 +153,10 @@ const styles = StyleSheet.create({
   },
   space: {
     width: 200,
+    // backgroundColor: 'red',
+  },
+  icon: {
+    width: 150,
     // backgroundColor: 'red',
   },
 });

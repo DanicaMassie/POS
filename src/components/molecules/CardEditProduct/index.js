@@ -9,73 +9,51 @@ const CardEditProduct = () => {
       <Text style={{fontWeight: 'bold', fontSize: 16}}>Edit Product</Text>
       <Gap height={10} />
       <View style={styles.secContainer}>
+        <View style={styles.cardContainer2}>
+          <Text style={styles.text}>ID</Text>
+          <Gap height={8} />
+          <View style={styles.box}>
+            <Text>001</Text>
+          </View>
+        </View>
         <View style={styles.cardContainer1}>
           <Image source={Menu1} style={styles.Pict} />
           <View style={styles.card}>
-            <Text style={styles.text}>Select company image/logo</Text>
+            <Text style={styles.text}>Select Picture</Text>
             <Gap height={30} />
             <View style={styles.text}>
               <TouchableOpacity style={styles.browse}>
-                <Text>Browse</Text>
+                <Text style={styles.variantext}>Browse</Text>
               </TouchableOpacity>
             </View>
           </View>
         </View>
+
         <View style={styles.cardContainer2}>
-          <Text style={styles.text}>Business Name</Text>
+          <Text style={styles.text}>Product Name</Text>
           <Gap height={8} />
           <View style={styles.box}>
-            <Text>KTP</Text>
+            <Text>Nasi Goreng</Text>
           </View>
         </View>
         <View style={styles.cardContainer2}>
-          <Text style={styles.text}>Phone Number</Text>
+          <Text style={styles.text}>Category</Text>
           <Gap height={8} />
           <View style={styles.box}>
-            <Text>08XX XXXX XXXX</Text>
+            <Text>Makanan</Text>
           </View>
         </View>
         <View style={styles.cardContainer2}>
-          <Text style={styles.text}>Email</Text>
+          <Text style={styles.text}>Price </Text>
           <Gap height={8} />
           <View style={styles.box}>
-            <Text>ktp@gmail.com</Text>
+            <Text>Rp. 25.000</Text>
           </View>
         </View>
         <View style={styles.cardContainer2}>
-          <Text style={styles.text}>Country </Text>
+          <Text style={styles.text}>Description</Text>
           <Gap height={8} />
-          <View style={styles.box}>
-            <Text>Indonesia</Text>
-          </View>
-        </View>
-        <View style={styles.smallContainer}>
-          <View style={styles.cardContainer3}>
-            <Text style={styles.text}>Province</Text>
-            <Gap height={8} />
-            <View style={styles.smallBox}>
-              <Text>Sulawesi Utara</Text>
-            </View>
-          </View>
-          <View style={styles.cardContainer3}>
-            <Text style={styles.text}>City</Text>
-            <Gap height={8} />
-            <View style={styles.smallBox}>
-              <Text>Minahasa Utara</Text>
-            </View>
-          </View>
-          <View style={styles.cardContainer3}>
-            <Text style={styles.text}>Postal Code</Text>
-            <Gap height={8} />
-            <View style={styles.smallBox}>
-              <Text>9876</Text>
-            </View>
-          </View>
-        </View>
-        <View style={styles.cardContainer2}>
-          <Text style={styles.text}>Address</Text>
-          <Gap height={8} />
-          <View style={styles.box}>
+          <View style={styles.boxDesc}>
             <Text>blalbalbalba blalbalba</Text>
           </View>
         </View>
@@ -134,6 +112,15 @@ const styles = StyleSheet.create({
     borderColor: '#DBD7F4',
     justifyContent: 'center',
   },
+  boxDesc: {
+    backgroundColor: '#F7F7FC',
+    width: '100%',
+    height: 120,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: '#DBD7F4',
+    // justifyContent: 'center',
+  },
   text: {
     fontSize: 14,
     fontWeight: 'bold',
@@ -152,5 +139,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#DBD7F4',
     justifyContent: 'center',
+  },
+  variantext: {
+    color: 'white',
   },
 });

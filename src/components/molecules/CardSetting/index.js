@@ -18,7 +18,7 @@ const CardSetting = () => {
             <Gap height={30} />
             <View style={styles.text}>
               <TouchableOpacity style={styles.browse}>
-                <Text>Browse</Text>
+                <Text style={styles.varianText}>Browse</Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -154,5 +154,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#DBD7F4',
     justifyContent: 'center',
+  },
+  varianText: {
+    color: 'white',
   },
 });

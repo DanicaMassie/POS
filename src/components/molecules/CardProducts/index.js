@@ -1,9 +1,9 @@
 import {useNavigation} from '@react-navigation/core';
 import React, {useState} from 'react';
-import {View, Text, StyleSheet, FlatList} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {IconSearch, Icon3dots, IconFilter} from '../../../assets';
-import {Gap, Button} from '../../atoms';
+import {Gap} from '../../atoms';
 import ProductsList from './ProductsList';
 
 const CardProducts = () => {
@@ -46,6 +46,7 @@ const CardProducts = () => {
             <Text style={styles.spaceTop}>Category</Text>
             <Text style={styles.spaceTop}>Price</Text>
             <Text style={styles.spaceTop}>Description</Text>
+            <View style={styles.icon}></View>
           </View>
           <Gap height={5} />
           <ProductsList />
@@ -129,6 +130,10 @@ const styles = StyleSheet.create({
   },
   spaceTop: {
     width: 200,
+    // backgroundColor: 'red',
+  },
+  icon: {
+    width: 150,
     // backgroundColor: 'red',
   },
   searchText: {

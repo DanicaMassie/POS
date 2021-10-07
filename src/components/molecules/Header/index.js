@@ -1,13 +1,19 @@
-import React from 'react';
-import {View, Text, StyleSheet, Image} from 'react-native';
+import {useNavigation} from '@react-navigation/core';
+import React, {useState} from 'react';
+import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import {ProfilePict} from '../../../assets';
 import {Button} from '../..';
 
 const Header = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <View style={styles.logo} />
-      <Text style={styles.text1}>Point Of Sales</Text>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('Dashboard')}
+        style={styles.buttonText}>
+        <Text style={styles.text1}>Point Of Sales</Text>
+      </TouchableOpacity>
       <View style={styles.right}>
         <Button
           type="icon-only"
